@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Pritee ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#000;color:#fff;font-family:Arial,sans-serif;overflow-x:hidden}
+section{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;padding:20px}
+.gold{color:#d4af37}
+.btn{display:inline-block;padding:14px 30px;background:#d4af37;color:#000;text-decoration:none;border-radius:40px;font-weight:bold;margin-top:20px}
+.hero{max-width:1100px;width:100%;display:flex;gap:40px;align-items:center}
+.photo{width:350px;height:500px;border:2px solid #d4af37;border-radius:20px;overflow:hidden;box-shadow:0 0 30px rgba(212,175,55,.35)}
+.photo img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.photo:hover img{transform:scale(1.05)}
+.text{max-width:500px}
+.text h1{font-size:60px}
+.text p,.content p{line-height:1.9}
+.bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.overlay{position:absolute;inset:0;background:rgba(0,0,0,.65)}
+.content{position:absolute;left:8%;bottom:12%;max-width:600px;z-index:2}
+.content h2{font-size:55px;margin-bottom:15px}
+.final{text-align:center;max-width:800px}
+.final h1{font-size:70px}
+.spark{position:fixed;inset:0;pointer-events:none}
+.dot{position:absolute;color:#d4af37;animation:f 8s linear infinite}
+@keyframes f{from{transform:translateY(0);opacity:1}to{transform:translateY(-110vh);opacity:0}}
+@media(max-width:768px){
+.hero{flex-direction:column;text-align:center}
+.photo{width:280px;height:380px}
+.text h1,.content h2,.final h1{font-size:38px}
+.content{left:5%;right:5%;bottom:8%;max-width:none}
+}
+</style>
+</head>
+<body>
+
+<div class="spark" id="spark"></div>
+
+<audio id="loveSong" loop>
+<source src="music.mpeg" type="audio/mpeg">
+</audio>
+
+<section>
+<div class="hero">
+<div class="photo"><img src="image1.jpeg"></div>
+<div class="text">
+<h1 class="gold">Pritee ❤️</h1>
+<p>
+তোমার কাছে আমার কিছু কথা আছে...<br><br>
+হয়তো সবসময় সময় দিতে পারিনি,
+কিন্তু তোমাকে কখনো গুরুত্ব কম দিইনি।
+</p>
+<a class="btn" href="#page2" onclick="document.getElementById('loveSong').play()">শুনবে? ❤️</a>
+</div>
+</div>
+</section>
+
+<section id="page2" class="bg">
+<img src="image2.jpeg">
+<div class="overlay"></div>
+<div class="content">
+<h2 class="gold">আমি জানি...</h2>
+<p>
+অনেক সময় তোমাকে সময় দিতে পারিনি।<br>
+অনেক সময় তোমার অপেক্ষাও করিয়েছি।<br><br>
+তার জন্য আমি সত্যিই দুঃখিত।
+</p>
+<a class="btn" href="#page3">একটা কথা বলি? ✨</a>
+</div>
+</section>
+
+<section id="page3">
+<div class="hero">
+<div class="photo"><img src="image0.jpeg"></div>
+<div class="text">
+<h2 class="gold">তুমি জানো?</h2><br>
+<p>
+আমি ব্যস্ত ছিলাম, তোমার থেকে দূরে যাওয়ার জন্য না।<br><br>
+হয়তো সময় কম ছিল,<br>
+কিন্তু ভালোবাসা কখনো কম ছিল না।
+</p>
+<a class="btn" href="#page4">আরও কিছু আছে ❤️</a>
+</div>
+</div>
+</section>
+
+<section id="page4">
+<div class="final">
+<h2 class="gold">আর একটা কথা...</h2><br>
+<p>
+তোমার একটা মেসেজ,<br>
+একটা হাসি,<br>
+আমার পুরো দিনটা বদলে দিতে পারে।<br><br>
+তুমি আমার জীবনের সবচেয়ে সুন্দর অংশ।
+</p>
+<a class="btn" href="#page5">শেষ কথা 🌹</a>
+</div>
+</section>
+
+<section id="page5">
+<div class="final">
+<h1 class="gold">Sorry Pritee ❤️</h1><br>
+<p>
+সময় কম ছিল...<br>
+ভালোবাসা না।<br><br>
+আমি নিখুঁত নই,<br>
+কিন্তু তোমাকে ভালোবাসার ব্যাপারে সবসময় সত্যি।
+</p><br>
+<h2 class="gold">এবার একটু হাসো... ❤️</h2>
+</div>
+</section>
+
+<script>
+setInterval(()=>{
+ const d=document.createElement('div');
+ d.className='dot';
+ d.innerHTML='✨';
+ d.style.left=Math.random()*100+'vw';
+ d.style.bottom='-20px';
+ d.style.fontSize=(10+Math.random()*20)+'px';
+ document.getElementById('spark').appendChild(d);
+ setTimeout(()=>d.remove(),8000);
+},400);
+</script>
+
+</body>
+</html>
